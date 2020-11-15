@@ -101,4 +101,14 @@
   .mdi {
     color: #3DD2CC;
   }
+
+  @media screen and (max-width: 768px) {
+    .v-application--is-ltr .v-timeline--dense:not(.v-timeline--reverse):before {
+      left: calc(25px - 1px);
+    }
+    .v-timeline-item__divider {
+      min-width: 50px;
+    }
+  }
+
 </style>
