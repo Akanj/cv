@@ -33,7 +33,7 @@ Vue.use(Vuetify)
 export default new Vuetify({
   name: "Contact",
   icons: {
-    iconfont: 'mdi', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
+    iconfont: 'mdi',
   },
 });
 
@@ -42,8 +42,13 @@ export default new Vuetify({
 </script>
 
 <style lang="scss" scoped>
-.mdi {
-  margin-right: 15px;
-}
+  .mdi {
+    margin-right: 15px;
+    color: #3DD2CC;
+  }
+
+  .theme--light.v-application a {
+      color: #3E6B89;
+  }
 
 </style>

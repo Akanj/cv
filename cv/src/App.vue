@@ -17,6 +17,30 @@
 
       <Contact/>
 
+      <v-bottom-navigation
+          v-if="isMobile()"
+         scroll-threshold
+          background-color="#3DD2CC"
+          color="white"
+          flat
+          dense
+          hide-on-scroll
+          fixed
+      >
+
+        <v-btn>
+          <a itemprop="telephone" href="tel:+33631789238"><v-icon>mdi-phone</v-icon></a>
+        </v-btn>
+
+        <v-btn>
+          <a itemprop="url" rel="me" href="https://www.linkedin.com/in/aaitkaci"><v-icon>mdi-linkedin</v-icon></a>
+        </v-btn>
+
+        <v-btn>
+          <a itemprop="email" href="mailto:angelina.aitkaci@gmail.com"><v-icon>mdi-email</v-icon></a>
+        </v-btn>
+
+      </v-bottom-navigation>
     </v-main>
   </v-app>
 </template>
@@ -44,6 +68,16 @@
     data: () => ({
       //
     }),
+
+    methods: {
+      isMobile() {
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          return true
+        } else {
+          return false
+        }
+      }
+    }
   });
 </script>
 
@@ -94,20 +128,28 @@
     letter-spacing: 3px;
   }
   .theme--light.v-application {
-    h2, .title, p, li, a {
+    h2, .title, p, li {
       color: #3E6B89;
     }
   }
-  .mdi {
-    color: #3DD2CC;
-  }
 
+  /* mobile */
   @media screen and (max-width: 768px) {
     .v-application--is-ltr .v-timeline--dense:not(.v-timeline--reverse):before {
       left: calc(25px - 1px);
     }
     .v-timeline-item__divider {
       min-width: 50px;
+    }
+    .v-timeline--dense .v-timeline-item__body {
+      max-width: calc(100% - 50px);
+    }
+
+    .v-btn > .v-btn__content a {
+      text-decoration: none;
+      .v-icon {
+        color: white;
+      }
     }
   }
 
