@@ -1,7 +1,7 @@
 <template>
-  <article>
+  <article itemprop="description">
     <p>Lead Technique Magento 2 et forte de 5 ans d'expérience en agence de communication, je souhaite me tourner vers le développement JavaScript (ES6, TypeScript, Vue, React, Angular...).</p>
-    <p>Comme mon parcours en témoigne, je sais faire preuve d'une grande agilité, de résilience etd'adaptabilité. Je cherche continuellement à monter en compétences par l'échange avec mon équipe et l'auto-formation.</p>
+    <p>Comme mon parcours en témoigne, je sais faire preuve d'une grande agilité, de résilience et d'adaptabilité. Je cherche continuellement à monter en compétences par l'échange avec mon équipe et l'auto-formation.</p>
   </article>
 </template>
 
@@ -10,7 +10,3 @@ export default {
 name: "Objectives"
 }
 </script>
-
-<style scoped>
-
-</style>

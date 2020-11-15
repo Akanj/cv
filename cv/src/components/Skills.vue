@@ -1,24 +1,24 @@
 <template>
-  <article>
-    <h3>Compétences</h3>
+  <article itemscope itemtype="http://schema.org/ItemList">
+    <h3  itemprop="name">Compétences</h3>
     <ul>
-      <li>PHP</li>
-      <li>SASS/LESS</li>
-      <li>Magento 2</li>
-      <li>TWIG</li>
-      <li>Suite Adobe</li>
-      <li>MacOS X</li>
-      <li>Redmine</li>
-      <li>Anglais (niv. B1)</li>
-      <li>Vue.js (notions)</li>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JQuery</li>
-      <li>Git / Gitlab</li>
-      <li>Composer</li><li>Bootstrap</li>
-      <li>Docker</li>
-      <li>MySQL</li>
-      <li>ES6 (notions)</li>
+      <li itemprop="itemListElement">PHP</li>
+      <li itemprop="itemListElement">SASS/LESS</li>
+      <li itemprop="itemListElement">Magento 2</li>
+      <li itemprop="itemListElement">TWIG</li>
+      <li itemprop="itemListElement">Suite Adobe</li>
+      <li itemprop="itemListElement">MacOS X</li>
+      <li itemprop="itemListElement">Redmine</li>
+      <li itemprop="itemListElement">Anglais (niv. B1)</li>
+      <li itemprop="itemListElement">Vue.js (notions)</li>
+      <li itemprop="itemListElement">HTML5</li>
+      <li itemprop="itemListElement">CSS3</li>
+      <li itemprop="itemListElement">JQuery</li>
+      <li itemprop="itemListElement">Git / Gitlab</li>
+      <li itemprop="itemListElement">Composer</li><li itemprop="itemListElement">Bootstrap</li>
+      <li itemprop="itemListElement">Docker</li>
+      <li itemprop="itemListElement">MySQL</li>
+      <li itemprop="itemListElement">ES6 (notions)</li>
     </ul>
   </article>
 </template>

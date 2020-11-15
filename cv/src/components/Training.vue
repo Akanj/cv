@@ -10,19 +10,18 @@
           small
           class="white--text mb-12"
           color="#3DD2CC"
-          large
-      >
-        <v-card
-            light
-        >
-          <v-card-title class="title">
+          itemprop="alumniOf"
+          itemscope
+          itemtype="http://schema.org/EducationalOrganization">
+        <v-card>
+          <v-card-title class="title" itemprop="description">
             Formation Magento 2
           </v-card-title>
-          <v-card-subtitle>
+          <v-card-subtitle class="subtitle">
             Aout 2017 - Sept 2017
           </v-card-subtitle>
           <v-card-text class="white text--primary">
-            <p>Clever Age</p>
+            <p itemprop="name">Clever Age</p>
           </v-card-text>
         </v-card>
       </v-timeline-item>
@@ -31,19 +30,19 @@
           small
           class="white--text mb-12"
           color="#3DD2CC"
-          large
+          itemprop="alumniOf"
+          itemscope
+          itemtype="http://schema.org/EducationalOrganization"
       >
-        <v-card
-            light
-        >
-          <v-card-title class="title">
+        <v-card>
+          <v-card-title class="title" itemprop="description">
             Formation Web Designer
           </v-card-title>
-          <v-card-subtitle>
+          <v-card-subtitle class="subtitle">
             SEPT 2013 - JUIN 2014
           </v-card-subtitle>
           <v-card-text class="white text--primary">
-            <p>DGD Formation</p>
+            <p><span itemprop="name">DGD Formation</span> - <span itemprop="location">Vesoul</span></p>
             <p>Titre professionnel Niveau V</p>
           </v-card-text>
         </v-card>
@@ -53,19 +52,19 @@
           small
           class="white--text mb-12"
           color="#3DD2CC"
-          large
+          itemprop="alumniOf"
+          itemscope
+          itemtype="http://schema.org/EducationalOrganization"
       >
-        <v-card
-            light
-        >
-          <v-card-title class="title">
+        <v-card>
+          <v-card-title class="title" itemprop="name">
             UFR Sciences et Techniques
           </v-card-title>
-          <v-card-subtitle>
+          <v-card-subtitle class="subtitle">
             SEPT 2011 - JUIL 2012
           </v-card-subtitle>
           <v-card-text class="white text--primary">
-            <p>Licence en sciences physiques</p>
+            <p itemprop="description">Licence en sciences physiques</p>
           </v-card-text>
         </v-card>
       </v-timeline-item>

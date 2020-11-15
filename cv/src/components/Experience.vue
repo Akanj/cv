@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <section>
     <h3>Expériences</h3>
     <v-timeline
         clipped
@@ -11,19 +11,19 @@
           small
           class="white--text mb-12"
           color="#3DD2CC"
-          large
+          itemprop="worksFor"
+          itemscope
+          itemtype="http://schema.org/Organization"
       >
-        <v-card
-            light
-        >
+        <v-card>
           <v-card-title class="title">
-            Lead Technique Magento 2 - API & YOU
+            <span itemprop="jobTitle">Lead Technique Magento 2</span> - <span itemprop="name">API & YOU</span>
           </v-card-title>
-          <v-card-subtitle>
-            FÉV 2019 - AUJOURD'HUI
-          </v-card-subtitle>
           <v-card-text class="white text--primary">
-            <ul>
+            <v-card-subtitle class="subtitle">
+              FÉV 2019 - AUJOURD'HUI
+            </v-card-subtitle>
+            <ul itemprop="description">
               <li>Compréhension des attentes et problématiques du client</li>
               <li>Participation à l'élaboration du cahier des charges fonctionnel</li>
               <li>Estimation des temps de développement</li>
@@ -43,19 +43,18 @@
           small
           class="white--text mb-12"
           color="#3DD2CC"
-          large
+          itemscope
+          itemtype="http://schema.org/Event/Job"
       >
-        <v-card
-            light
-        >
+        <v-card>
           <v-card-title class="title">
-            Développeuse Front-end - API & YOU
+            <span itemprop="name">Développeuse Front-end</span> - API & YOU
           </v-card-title>
-          <v-card-subtitle>
-            JAN 2017 - FÉV 2019
+          <v-card-subtitle class="subtitle">
+            <span itemprop="startDate" content="2017-01-21T20:00">JAN 2017</span> - <span itemprop="endDate" content="2019-02-21T20:00">FÉV 2019</span>
           </v-card-subtitle>
           <v-card-text class="white text--primary">
-            <ul>
+            <ul itemprop="description">
               <li>Développement front-end Magento 2</li>
               <li>Analyse et résolution des dysfonctionnements</li>
               <li>Mise en place et respect de process pour la structure des projets</li>
@@ -72,19 +71,18 @@
           small
           class="white--text mb-12"
           color="#3DD2CC"
-          large
+          itemscope
+          itemtype="http://schema.org/Event/Job"
       >
-        <v-card
-            light
-        >
+        <v-card>
           <v-card-title class="title">
-            Intégratrice Web - API & YOU
+            <span itemprop="name">Intégratrice Web</span> - API & YOU
           </v-card-title>
-          <v-card-subtitle>
-            MAI 2015 - JAN 2017
+          <v-card-subtitle class="subtitle">
+            <span itemprop="startDate" content="2015-05-21T20:00">MAI 2015</span> - <span itemprop="endDate" content="2017-01-21T20:00">JAN 2017</span>
           </v-card-subtitle>
           <v-card-text class="white text--primary">
-            <ul>
+            <ul itemprop="description">
               <li>Création de sites vitrines utilisant un CMS propriétaire basé Symfony 2.8marketing</li>
               <li>Participation aux mêlées quotidiennesmarketing</li>
               <li>Recherche de solutions techniques à des problèmes marketing</li>
@@ -94,13 +92,13 @@
       </v-timeline-item>
 
     </v-timeline>
-  </div>
+  </section>
 
 </template>
 
 <script>
   export default {
-    name: 'HelloWorld',
+    name: 'Experience',
 
     data: () => ({
       ecosystem: [

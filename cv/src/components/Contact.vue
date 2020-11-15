@@ -3,30 +3,47 @@
   <article>
     <h3>Coordonnées</h3>
     <p>
-      <span class="material-icons">phone</span>
-      <span>06 31 78 92 38</span>
+      <span class="mdi mdi-phone"></span>
+      <a itemprop="telephone" href="tel:+33631789238">06 31 78 92 38</a>
     </p>
     <p>
-      <span class="material-icons">email</span>
-      <span>06 31 78 92 38</span>
+      <span class="mdi mdi-email"></span>
+      <a itemprop="email" href="mailto:angelina.aitkaci@gmail.com">angelina.aitkaci@gmail.com</a>
     </p>
     <p>
-      <span class="material-icons">location_searching</span>
-      <span>06 31 78 92 38</span>
+      <span class="mdi mdi-target"></span>
+      <span itemprop="homeLocation">Jura</span> - Mobile en France</p>
+    <p>
+      <span class="mdi mdi-car"></span>
+
+      <span>Permis B - Vehicule</span>
     </p>
     <p>
-      <span class="material-icons">directions_car</span>
-      <span>06 31 78 92 38</span>
+      <a itemprop="url" rel="me" href="https://www.linkedin.com/in/aaitkaci">https://www.linkedin.com/in/aaitkaci</a>
     </p>
   </article>
 </template>
 
 <script>
-export default {
-  name: "Contact"
-}
+import Vue from 'vue'
+import Vuetify from 'vuetify/lib'
+
+Vue.use(Vuetify)
+
+export default new Vuetify({
+  name: "Contact",
+  icons: {
+    iconfont: 'mdi', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
+  },
+});
+
+
+
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.mdi {
+  margin-right: 15px;
+}
 
 </style>
