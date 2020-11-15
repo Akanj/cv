@@ -33,11 +33,16 @@
         </v-btn>
 
         <v-btn>
-          <a itemprop="url" rel="me" href="https://www.linkedin.com/in/aaitkaci"><v-icon>mdi-linkedin</v-icon></a>
+          <a itemprop="url" rel="me" href="https://www.linkedin.com/in/aaitkaci" target="_blank" ><v-icon>mdi-linkedin</v-icon></a>
         </v-btn>
 
         <v-btn>
-          <a itemprop="email" href="mailto:angelina.aitkaci@gmail.com"><v-icon>mdi-email</v-icon></a>
+          <a itemprop="email" href="mailto:angelina.aitkaci@gmail.com" target="_blank"><v-icon>mdi-email</v-icon></a>
+        </v-btn>
+
+        <v-btn>
+          /* TODO fix le téléchargement du PDF voir https://cli.vuejs.org/guide/html-and-static-assets.html#the-public-folder ? */
+          <a href="./Aitkaci-ali_Angelina.pdf" download="Aitkaci-ali_Angelina.pdf" target="_blank"><v-icon>mdi-content-save-outline</v-icon></a>
         </v-btn>
 
       </v-bottom-navigation>
@@ -82,10 +87,7 @@
 </script>
 
 <style lang="scss">
-  * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+
   ::-moz-selection { /* Code for Firefox */
     color: white;
     background: #3DD2CC;
@@ -93,6 +95,9 @@
   ::selection {
     color: white;
     background: #3DD2CC;
+  }
+  body {
+    border-bottom: 10px solid #3DD2CC;
   }
   main {
     margin: 0 15px 15px;
