@@ -41,7 +41,7 @@
         </v-btn>
 
         <v-btn>
-          /* TODO fix le téléchargement du PDF voir https://cli.vuejs.org/guide/html-and-static-assets.html#the-public-folder ? */
+          <!-- TODO fix le téléchargement du PDF voir https://cli.vuejs.org/guide/html-and-static-assets.html#the-public-folder ? -->
           <a href="./Aitkaci-ali_Angelina.pdf" download="Aitkaci-ali_Angelina.pdf" target="_blank"><v-icon>mdi-content-save-outline</v-icon></a>
         </v-btn>
 
