@@ -1,5 +1,5 @@
 <template>
-  <article itemscope itemtype="http://schema.org/ItemList">
+  <article itemscope itemtype="http://schema.org/ItemList" class="skills">
     <h3  itemprop="name">Compétences</h3>
     <ul>
       <li itemprop="itemListElement">PHP</li>
@@ -29,6 +29,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  ul {
+    column-count: 2;
+  }
 </style>

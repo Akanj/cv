@@ -1,21 +1,26 @@
 <template>
   <v-app>
     <v-main itemscope itemtype="http://schema.org/Person">
-      <header>
-        <h1 itemprop="name"><span itemprop="givenName">Angelina</span> <span itemprop="familyName">Aïtkaci-Ali</span></h1>
-        <h2>Développeuse Front-end</h2>
-      </header>
+      <v-container>
+        <header>
+          <h1 itemprop="name"><span itemprop="givenName">Angelina</span> <span itemprop="familyName">Aïtkaci-Ali</span></h1>
+          <h2>Développeuse Front-end</h2>
+        </header>
 
-      <Objectives/>
+        <Objectives/>
+        <div class="content">
+          <Experience/>
 
-      <Experience/>
+          <section class="additionnal">
 
-      <section>
-        <Skills/>
-        <Training/>
-      </section>
+            <Skills/>
+            <Training/>
 
-      <Contact/>
+            <Contact/>
+          </section>
+
+        </div>
+      </v-container>
 
       <v-bottom-navigation
           v-if="isMobile()"
@@ -40,10 +45,10 @@
           <a itemprop="email" href="mailto:angelina.aitkaci@gmail.com" target="_blank"><v-icon>mdi-email</v-icon></a>
         </v-btn>
 
-        <v-btn>
-          <!-- TODO fix le téléchargement du PDF voir https://cli.vuejs.org/guide/html-and-static-assets.html#the-public-folder ? -->
-          <a href="./Aitkaci-ali_Angelina.pdf" download="Aitkaci-ali_Angelina.pdf" target="_blank"><v-icon>mdi-content-save-outline</v-icon></a>
-        </v-btn>
+        <!--<v-btn>
+           TODO fix le téléchargement du PDF voir https://cli.vuejs.org/guide/html-and-static-assets.html#the-public-folder ?
+          <a v-bind:href="pdfItem.loc" download="pdfItem.title" target="_blank"><v-icon>mdi-content-save-outline</v-icon></a>
+        </v-btn> -->
 
       </v-bottom-navigation>
     </v-main>
@@ -58,7 +63,6 @@
   import Skills from './components/Skills';
   import Contact from './components/Contact';
 
-
   export default ({
     name: 'App',
 
@@ -70,9 +74,12 @@
       Contact,
     },
 
-    data: () => ({
-      //
-    }),
+    data () {
+      return {
+        publicPath: process.env.BASE_URL,
+        // pdfItem: {title: 'Aitkaci-ali_Angelina.pdf', loc: require('./assets/Aitkaci-ali_Angelina.pdf')}
+      }
+    },
 
     methods: {
       isMobile() {
@@ -81,29 +88,32 @@
         } else {
           return false
         }
-      }
+      },
     }
   });
 </script>
 
 <style lang="scss">
 
+  $primary-color : #3DD2CC;
+  $text-color: #3E6B89;
+
   ::-moz-selection { /* Code for Firefox */
     color: white;
-    background: #3DD2CC;
+    background: $primary-color;
   }
   ::selection {
     color: white;
-    background: #3DD2CC;
+    background: $primary-color;
   }
   body {
-    border-bottom: 10px solid #3DD2CC;
+    border-bottom: 10px solid $primary-color;
   }
   main {
     margin: 0 15px 15px;
   }
   h1, h3, .theme--light.v-card .v-card__subtitle.subtitle {
-    color: #3DD2CC;
+    color: $primary-color;
     text-transform: uppercase;
   }
   h1, h2 {
@@ -123,7 +133,7 @@
   }
   header {
     margin: 15px 0 30px;
-    border-bottom: 3px solid #3DD2CC;
+    border-bottom: 3px solid $primary-color;
   }
   article {
     margin-bottom: 15px;
@@ -134,7 +144,7 @@
   }
   .theme--light.v-application {
     h2, .title, p, li {
-      color: #3E6B89;
+      color: $text-color;
     }
   }
 
@@ -156,6 +166,49 @@
         color: white;
       }
     }
+  }
+
+
+  @media screen and (min-width: 769px) {
+    .content {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      -ms-flex-direction: row;
+      -webkit-flex-direction: row;
+      align-items: stretch;
+    }
+    .additionnal {
+      flex-basis: 33%;
+      -webkit-flex-basis: 33%;
+      order: 10;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-flex-direction: column;
+      .contact {
+        order:10;
+      }
+      .training {
+        order:20;
+      }
+      .skills {
+        order: 30;
+      }
+    }
+    .experience {
+      flex-basis: 66%;
+      -webkit-flex-basis: 66%;
+      order: 20;
+    }
+
   }
 
 </style>

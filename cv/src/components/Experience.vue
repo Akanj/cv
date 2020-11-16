@@ -1,10 +1,10 @@
 <template>
 
-  <section>
+  <section class="experience">
     <h3>Expériences</h3>
     <v-timeline
-        clipped
         dense
+        clipped
     >
       <v-timeline-item
           fill-dot
@@ -17,12 +17,12 @@
       >
         <v-card>
           <v-card-title class="title">
-            <span itemprop="jobTitle">Lead Technique Magento 2</span> - <span itemprop="name">API & YOU</span>
+            <span><span itemprop="jobTitle">Lead Technique Magento 2</span> <br> <span itemprop="name">API & YOU</span></span>
           </v-card-title>
+          <v-card-subtitle class="subtitle">
+            FÉV 2019 - AUJOURD'HUI
+          </v-card-subtitle>
           <v-card-text class="white text--primary">
-            <v-card-subtitle class="subtitle">
-              FÉV 2019 - AUJOURD'HUI
-            </v-card-subtitle>
             <ul itemprop="description">
               <li>Compréhension des attentes et problématiques du client</li>
               <li>Participation à l'élaboration du cahier des charges fonctionnel</li>
@@ -48,7 +48,7 @@
       >
         <v-card>
           <v-card-title class="title">
-            <span itemprop="name">Développeuse Front-end</span> - API & YOU
+            <span><span itemprop="name">Développeuse Front-end</span> <br> API & YOU</span>
           </v-card-title>
           <v-card-subtitle class="subtitle">
             <span itemprop="startDate" content="2017-01-21T20:00">JAN 2017</span> - <span itemprop="endDate" content="2019-02-21T20:00">FÉV 2019</span>
@@ -76,7 +76,7 @@
       >
         <v-card>
           <v-card-title class="title">
-            <span itemprop="name">Intégratrice Web</span> - API & YOU
+            <span><span itemprop="name">Intégratrice Web</span><br> API & YOU</span>
           </v-card-title>
           <v-card-subtitle class="subtitle">
             <span itemprop="startDate" content="2015-05-21T20:00">MAI 2015</span> - <span itemprop="endDate" content="2017-01-21T20:00">JAN 2017</span>
@@ -93,7 +93,6 @@
 
     </v-timeline>
   </section>
-
 </template>
 
 <script>
@@ -154,3 +153,9 @@
     }),
   }
 </script>
+
+<style lang="scss" scoped>
+ ul li {
+   line-height: 1.8;
+ }
+</style>

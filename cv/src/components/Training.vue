@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="training">
     <h3>Formation</h3>
     <v-timeline
         dense
@@ -8,12 +8,14 @@
       <v-timeline-item
           fill-dot
           small
-          class="white--text mb-12"
+          class="white--text mb-1"
           color="#3DD2CC"
           itemprop="alumniOf"
           itemscope
           itemtype="http://schema.org/EducationalOrganization">
-        <v-card>
+        <v-card
+            elevation="1"
+            tile>
           <v-card-title class="title" itemprop="description">
             Formation Magento 2
           </v-card-title>
@@ -28,7 +30,7 @@
       <v-timeline-item
           fill-dot
           small
-          class="white--text mb-12"
+          class="white--text mb-1"
           color="#3DD2CC"
           itemprop="alumniOf"
           itemscope
@@ -42,15 +44,14 @@
             SEPT 2013 - JUIN 2014
           </v-card-subtitle>
           <v-card-text class="white text--primary">
-            <p><span itemprop="name">DGD Formation</span> - <span itemprop="location">Vesoul</span></p>
-            <p>Titre professionnel Niveau V</p>
+            <p><span itemprop="name">DGD Formation</span> - <span itemprop="location">Vesoul</span><br>Titre professionnel Niveau V</p>
           </v-card-text>
         </v-card>
       </v-timeline-item>
       <v-timeline-item
           fill-dot
           small
-          class="white--text mb-12"
+          class="white--text mb-1"
           color="#3DD2CC"
           itemprop="alumniOf"
           itemscope

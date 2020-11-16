@@ -1,20 +1,20 @@
 <template>
 
-  <article>
+  <article class="contact">
     <h3>Coordonnées</h3>
     <p>
-      <span class="mdi mdi-phone"></span>
+      <v-icon>mdi-phone</v-icon>
       <a itemprop="telephone" href="tel:+33631789238">06 31 78 92 38</a>
     </p>
     <p>
-      <span class="mdi mdi-email"></span>
+      <v-icon>mdi-email</v-icon>
       <a itemprop="email" href="mailto:angelina.aitkaci@gmail.com">angelina.aitkaci@gmail.com</a>
     </p>
     <p>
-      <span class="mdi mdi-target"></span>
+      <v-icon>mdi-target</v-icon>
       <span itemprop="homeLocation">Jura</span> - Mobile en France</p>
     <p>
-      <span class="mdi mdi-car"></span>
+      <v-icon>mdi-car</v-icon>
 
       <span>Permis B - Vehicule</span>
     </p>
