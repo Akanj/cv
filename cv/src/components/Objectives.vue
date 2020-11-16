@@ -13,7 +13,9 @@ name: "Objectives"
 
 <style lang="scss" scoped>
 
-@media screen and (min-width: 769px) {
+@import '~vuetify/src/styles/styles.sass';
+
+@media #{map-get($display-breakpoints, 'sm-and-up')} {
   .objectives {
     margin-bottom: 30px ;
   }

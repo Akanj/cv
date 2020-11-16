@@ -95,6 +95,7 @@
 
 <style lang="scss">
 
+  @import '~vuetify/src/styles/styles.sass';
   $primary-color : #3DD2CC;
   $text-color: #3E6B89;
 
@@ -138,7 +139,6 @@
   article {
     margin-bottom: 15px;
   }
-
   h3 {
     letter-spacing: 3px;
   }
@@ -149,7 +149,7 @@
   }
 
   /* mobile */
-  @media screen and (max-width: 768px) {
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
     .v-application--is-ltr .v-timeline--dense:not(.v-timeline--reverse):before {
       left: calc(25px - 1px);
     }
@@ -160,16 +160,20 @@
       max-width: calc(100% - 50px);
     }
 
+  }
+
+  @media #{map-get($display-breakpoints, 'md-and-down')} {
+
     .v-btn > .v-btn__content a {
       text-decoration: none;
+
       .v-icon {
         color: white;
       }
     }
   }
-
-
-  @media screen and (min-width: 769px) {
+    /* laptop + desktop */
+    @media #{map-get($display-breakpoints, 'md-and-up')} {
     .content {
       display: -webkit-box;
       display: -moz-box;
@@ -182,8 +186,8 @@
       align-items: stretch;
     }
     .additionnal {
-      flex-basis: 33%;
-      -webkit-flex-basis: 33%;
+      flex-basis: 35%;
+      -webkit-flex-basis: 35%;
       order: 10;
       display: -webkit-box;
       display: -moz-box;
@@ -204,8 +208,8 @@
       }
     }
     .experience {
-      flex-basis: 66%;
-      -webkit-flex-basis: 66%;
+      flex-basis: 65%;
+      -webkit-flex-basis: 65%;
       order: 20;
     }
 
