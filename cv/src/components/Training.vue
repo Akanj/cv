@@ -1,5 +1,5 @@
 <template>
-  <article class="training">
+  <article class="training" :class="className">
     <h3>Formation</h3>
     <v-timeline
         dense
@@ -75,7 +75,10 @@
 
 <script>
 export default {
-  name: "Training"
+  name: "Training",
+
+  props: ['className']
+
 }
 </script>
 

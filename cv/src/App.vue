@@ -9,13 +9,13 @@
 
         <Objectives/>
         <div class="content d-sm-flex flex-row align-stretch">
-          <Experience/>
+          <Experience className="order-2"/>
 
-          <section class="additionnal d-sm-flex flex-column">
-            <Skills :className="order-30"/>
-            <Training/>
+          <section class="additionnal d-sm-flex flex-column order-1">
+            <Skills className="order-last"/>
+            <Training className="order-20"/>
 
-            <Contact/>
+            <Contact className="order-first"/>
           </section>
 
         </div>
@@ -174,21 +174,10 @@
     .additionnal {
       flex-basis: 35%;
       -webkit-flex-basis: 35%;
-      order: 10;
-      .contact {
-        order:10;
-      }
-      .training {
-        order:20;
-      }
-      .skills {
-        order: 30;
-      }
     }
     .experience {
       flex-basis: 65%;
       -webkit-flex-basis: 65%;
-      order: 20;
     }
 
   }

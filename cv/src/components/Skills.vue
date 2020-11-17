@@ -27,12 +27,7 @@
 export default {
   name: "Skills",
 
-  data() {
-    return {
-      className : 'order-last',
-      // className : this.$parent.className,
-    }
-  },
+  props: ['className']
 
 }
 </script>

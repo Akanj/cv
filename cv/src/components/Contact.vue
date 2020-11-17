@@ -1,6 +1,6 @@
 <template>
 
-  <article class="contact">
+  <article class="contact" :class="className">
     <h3>Coordonnées</h3>
     <p>
       <v-icon>mdi-phone</v-icon>
@@ -35,6 +35,8 @@ export default new Vuetify({
   icons: {
     iconfont: 'mdi',
   },
+  props: ['className']
+
 });
 
 
