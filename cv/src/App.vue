@@ -8,12 +8,11 @@
         </header>
 
         <Objectives/>
-        <div class="content d-sm-flex">
+        <div class="content d-sm-flex flex-row align-stretch">
           <Experience/>
 
-          <section class="additionnal">
-
-            <Skills/>
+          <section class="additionnal d-sm-flex flex-column">
+            <Skills :className="order-30"/>
             <Training/>
 
             <Contact/>
@@ -172,30 +171,10 @@
   }
     /* laptop + desktop */
     @media #{map-get($display-breakpoints, 'md-and-up')} {
-      /* style USELESS https://vuetifyjs.com/en/styles/flex/#enabling-flexbox */
-    .content {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      flex-direction: row;
-      -ms-flex-direction: row;
-      -webkit-flex-direction: row;
-      align-items: stretch;
-    }
     .additionnal {
       flex-basis: 35%;
       -webkit-flex-basis: 35%;
       order: 10;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      flex-direction: column;
-      -ms-flex-direction: column;
-      -webkit-flex-direction: column;
       .contact {
         order:10;
       }

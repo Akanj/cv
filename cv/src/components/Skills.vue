@@ -1,5 +1,5 @@
 <template>
-  <article itemscope itemtype="http://schema.org/ItemList" class="skills">
+  <article itemscope itemtype="http://schema.org/ItemList" class="skills" :class="className">
     <h3  itemprop="name">Compétences</h3>
     <ul>
       <li itemprop="itemListElement">PHP</li>
@@ -25,7 +25,15 @@
 
 <script>
 export default {
-  name: "Skills"
+  name: "Skills",
+
+  data() {
+    return {
+      className : 'order-last',
+      // className : this.$parent.className,
+    }
+  },
+
 }
 </script>
 
