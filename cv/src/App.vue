@@ -8,7 +8,7 @@
         </header>
 
         <Objectives/>
-        <div class="content">
+        <div class="content d-sm-flex">
           <Experience/>
 
           <section class="additionnal">
@@ -45,10 +45,9 @@
           <a itemprop="email" href="mailto:angelina.aitkaci@gmail.com" target="_blank"><v-icon>mdi-email</v-icon></a>
         </v-btn>
 
-        <!--<v-btn>
-           TODO fix le téléchargement du PDF voir https://cli.vuejs.org/guide/html-and-static-assets.html#the-public-folder ?
-          <a v-bind:href="pdfItem.loc" download="pdfItem.title" target="_blank"><v-icon>mdi-content-save-outline</v-icon></a>
-        </v-btn> -->
+        <v-btn>
+          <a href="../public/assets/Aitkaci-ali_Angelina.pdf" download="Aitkaci-ali_Angelina.pdf" target="_blank"><v-icon>mdi-content-save-outline</v-icon></a>
+        </v-btn>
 
       </v-bottom-navigation>
     </v-main>
@@ -77,7 +76,6 @@
     data () {
       return {
         publicPath: process.env.BASE_URL,
-        // pdfItem: {title: 'Aitkaci-ali_Angelina.pdf', loc: require('./assets/Aitkaci-ali_Angelina.pdf')}
       }
     },
 
@@ -174,6 +172,7 @@
   }
     /* laptop + desktop */
     @media #{map-get($display-breakpoints, 'md-and-up')} {
+      /* style USELESS https://vuetifyjs.com/en/styles/flex/#enabling-flexbox */
     .content {
       display: -webkit-box;
       display: -moz-box;
